@@ -1,0 +1,4 @@
+let g:bundle_group = ['basic', 'tags', 'enhanced', 'filetypes', 'YCM'] " textobj
+let g:bundle_group += ['airline', 'echodoc', 'ale'] " ale  nerdtree leaderf
+let g:bundle_group += ['keysound']
+source ~/github/vim/init.vim

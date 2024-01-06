@@ -1,0 +1,14 @@
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ca = commit --amend
+    ci = commit
+    logg = log --graph --oneline --decorate
+    d  =  difftool
