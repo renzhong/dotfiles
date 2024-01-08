@@ -5,7 +5,7 @@
 # git
 - alias
 # zshrc
-- init
+- init: https://zhuanlan.zhihu.com/p/50080614
 - vpn
 - prompt: https://zhuanlan.zhihu.com/p/51008087
 # vim
