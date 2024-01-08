@@ -7,6 +7,7 @@
 # zshrc
 - init
 - vpn
+- prompt: https://zhuanlan.zhihu.com/p/51008087
 # vim
 - 本地配置
 - git 配置
