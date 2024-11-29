@@ -199,7 +199,7 @@ zstyle ':completion:*:complete:-command-:*:*' ignored-patterns '*.pdf|*.exe|*.dl
 zstyle ':completion:*:*sh:*:' tag-order files
 export GREP_COLORS="ms=38;5;208"
 
-[ ! -f ~/github/dotfiles/shell/prompt_fish.sh ] && source ~/github/dotfiles/shell/prompt_fish.sh
+[ -f ~/github/dotfiles/shell/prompt_fish.sh ] && source ~/github/dotfiles/shell/prompt_fish.sh
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
