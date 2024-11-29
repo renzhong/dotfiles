@@ -68,6 +68,10 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 # git 命令的 alias
 zstyle ':prezto:module:git:alias' skip 'yes'
+# 主题
+# zstyle ':prezto:module:prompt' theme 'redhat'
+zstyle ':prezto:module:prompt' theme 'steeef'
+zstyle ':prezto:module:prompt' pwd-length 'short'
 # 终端 title 格式
 zstyle ':prezto:module:terminal' auto-title 'yes'
 zstyle ':prezto:module:autosuggestions' color 'yes'
@@ -80,8 +84,9 @@ zstyle ':prezto:load' pmodule \
 	'utility' \
 	'completion' \
 	'history-substring-search' \
-	'autosuggestions'
-	# 'autosuggestions' \
+	'autosuggestions' \
+	'prompt' \
+
 
 # Initialize prezto
 antigen use prezto
@@ -91,9 +96,6 @@ antigen bundle rupa/z z.sh
 antigen bundle Vifon/deer
 antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle willghatch/zsh-cdr
-
-# antigen bundle zsh-users/zsh-autosuggestions
-# antigen bundle linnnus/autovenv
 # antigen bundle zsh-users/zaw
 
 # check login shell
@@ -195,12 +197,28 @@ DISABLE_CORRECTION="true"
 # completion detail
 zstyle ':completion:*:complete:-command-:*:*' ignored-patterns '*.pdf|*.exe|*.dll'
 zstyle ':completion:*:*sh:*:' tag-order files
-export GREP_COLOR="38;5;208"
+export GREP_COLORS="ms=38;5;208"
 
-export PATH="/Users/devin.zhang/bin:$PATH"
-export PYSDL2_DLL_PATH=/usr/local/lib/python3.11/site-packages/sdl2dll/dll/
-export BAT_THEME='gruvbox-dark'
-
-source ~/github/dotfiles/shell/prompt_fish.sh
+[ -f ~/github/dotfiles/shell/prompt_fish.sh ] && source ~/github/dotfiles/shell/prompt_fish.sh
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
+
+export PATH="$HOME/bin:$PATH"
+# export PYSDL2_DLL_PATH=/usr/local/lib/python3.11/site-packages/sdl2dll/dll/
+
+# https://zhuanlan.zhihu.com/p/81840844
+# function brew_disable() {
+#   export PATH=${PATH##*"/.linuxbrew/bin:"}
+#   export PATH=${PATH##*"/.linuxbrew/sbin:"}
+#   export MANPATH=${MANPATH##*"/.linuxbrew/share/man:"}
+#   export INFOPATH=${INFOPATH##*"/.linuxbrew/share/info:"}
+# }
+#
+# function brew_enable() {
+#   BREW='/home/linuxbrew/.linuxbrew'
+#   brew_disable
+#   export PATH="$BREW/bin:$BREW/sbin:$PATH"
+#   export MANPATH="$BREW/share/man:$MANPATH"
+#   export INFOPATH="$BREW/share/info:$INFOPATH"
+#   export HOMEBREW_NO_AUTO_UPDATE=1
+# }
