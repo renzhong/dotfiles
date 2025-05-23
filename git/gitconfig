@@ -1,12 +1,35 @@
-[user]
-    name =
-    email =
+[column]
+    ui = auto
 
-[includeIf "gitdir:~/work/"]
-    path = ~/.gitconfig-work
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[credential]
+	helper = store
 
 [diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
     tool = vimdiff
+
+[push]
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+
+[help]
+    autocorrect = prompt
+
+[core]
+    editor = ~/bin/vim
 
 [difftool]
     prompt = false
