@@ -26,8 +26,6 @@ if [ ! -f "$ANTIGEN" ]; then
 	mv "$TMPFILE" "$ANTIGEN"
 fi
 
-
-
 # Load local bash/zsh compatible settings
 INIT_SH_NOFUN=1
 INIT_SH_NOLOG=1
@@ -198,13 +196,14 @@ DISABLE_CORRECTION="true"
 zstyle ':completion:*:complete:-command-:*:*' ignored-patterns '*.pdf|*.exe|*.dll'
 zstyle ':completion:*:*sh:*:' tag-order files
 export GREP_COLORS="ms=38;5;208"
+export GREP_COLOR="38;5;208"
 
 [ -f ~/github/dotfiles/shell/prompt_fish.sh ] && source ~/github/dotfiles/shell/prompt_fish.sh
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
+export BAT_THEME='gruvbox-dark'
 export PATH="$HOME/bin:$PATH"
-# export PYSDL2_DLL_PATH=/usr/local/lib/python3.11/site-packages/sdl2dll/dll/
 
 # https://zhuanlan.zhihu.com/p/81840844
 # function brew_disable() {
@@ -222,3 +221,5 @@ export PATH="$HOME/bin:$PATH"
 #   export INFOPATH="$BREW/share/info:$INFOPATH"
 #   export HOMEBREW_NO_AUTO_UPDATE=1
 # }
+
+export ALL_PROXY=http://127.0.0.1:7890
