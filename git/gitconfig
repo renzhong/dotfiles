@@ -1,6 +1,3 @@
-[column]
-    ui = auto
-
 [branch]
     sort = -committerdate
 
@@ -38,6 +35,7 @@
     st = status
     co = checkout
     br = branch
+    brr = branch --column
     ca = commit --amend
     ci = commit
     logg = log --graph --oneline --decorate
