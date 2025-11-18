@@ -74,6 +74,9 @@ zstyle ':prezto:module:prompt' pwd-length 'short'
 zstyle ':prezto:module:terminal' auto-title 'yes'
 zstyle ':prezto:module:autosuggestions' color 'yes'
 # zstyle ':prezto:module:utility:grep' color 'no'
+# ls 主题
+zstyle ':prezto:module:utility:ls' color 'yes'
+
 zstyle ':prezto:load' pmodule \
 	'environment' \
 	'editor' \
@@ -204,6 +207,10 @@ export GREP_COLOR="38;5;208"
 
 export BAT_THEME='gruvbox-dark'
 export PATH="$HOME/bin:$PATH"
+# export JAVA_HOME="$HOME/.sdkman/candidates/java/8.0.472-librca"
+# node 使用 nvm 来管理
+# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # https://zhuanlan.zhihu.com/p/81840844
 # function brew_disable() {
