@@ -68,7 +68,8 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:git:alias' skip 'yes'
 # 主题
 # zstyle ':prezto:module:prompt' theme 'redhat'
-zstyle ':prezto:module:prompt' theme 'steeef'
+# zstyle ':prezto:module:prompt' theme 'steeef'
+zstyle ':prezto:module:prompt' theme 'pure'
 zstyle ':prezto:module:prompt' pwd-length 'short'
 # 终端 title 格式
 zstyle ':prezto:module:terminal' auto-title 'yes'
@@ -201,16 +202,13 @@ zstyle ':completion:*:*sh:*:' tag-order files
 export GREP_COLORS="ms=38;5;208"
 export GREP_COLOR="38;5;208"
 
-[ -f ~/github/dotfiles/shell/prompt_fish.sh ] && source ~/github/dotfiles/shell/prompt_fish.sh
+# [ -f ~/github/dotfiles/shell/prompt_fish.sh ] && source ~/github/dotfiles/shell/prompt_fish.sh
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
 export BAT_THEME='gruvbox-dark'
 export PATH="$HOME/bin:$PATH"
 # export JAVA_HOME="$HOME/.sdkman/candidates/java/8.0.472-librca"
-# node 使用 nvm 来管理
-# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # https://zhuanlan.zhihu.com/p/81840844
 # function brew_disable() {
@@ -228,5 +226,10 @@ export PATH="$HOME/bin:$PATH"
 #   export INFOPATH="$BREW/share/info:$INFOPATH"
 #   export HOMEBREW_NO_AUTO_UPDATE=1
 # }
+
+function nvm_enable() {
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+}
 
 export ALL_PROXY=http://127.0.0.1:7890
