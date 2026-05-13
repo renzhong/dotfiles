@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+repo="$1"
+
+# 提取 path: larksuite/cli.git
+path=$(echo "$repo" | sed -E 's#.*github.com[:/]([^ ]+)#\1#')
+
+# 去掉 .git 后缀
+path=${path%.git}
+
+# 本地目录
+dir="$HOME/github/$path"
+
+# 创建父目录
+mkdir -p "$(dirname "$dir")"
+
+# clone（使用原始 ssh 地址）
+git clone "$repo" "$dir"
+
+cd "$dir"
