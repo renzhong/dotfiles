@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "[leave] caffeinate running"
+caffeinate -dimsu
+echo "[leave] caffeinate stop"
